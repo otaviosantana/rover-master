@@ -8,4 +8,8 @@ class Position
     @y = position[1].to_i
     @direction = position[2]
   end
+
+  def to_s
+    "#{@x} #{@y} #{@direction}"
+  end
 end
