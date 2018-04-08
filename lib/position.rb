@@ -2,8 +2,8 @@ class Position
 
   attr_accessor :x, :y, :direction
 
+  # Assuming that arguments will always be correct
   def initialize(position)
-    raise if position.nil? or position.length != 3
     @x = position[0].to_i
     @y = position[1].to_i
     @direction = position[2]
