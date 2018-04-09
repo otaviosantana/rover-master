@@ -1,31 +1,32 @@
 # Rover Master
 
 This project was build with ruby 2.5.1 version
-## Pré requisitos
+## Requirements
  - Ruby 2.5.1 or later
+ - bundler
 
-## Processo de build e teste da aplicação Payments
-O build pode ser feito da seguinte maneira:
-##### Unix
-> ./mvnw clean install
-##### Windows
-> ./mvnw.cmd clean install
+## Running the program
+You can run the program with command(and input data after program starts):
+> ruby lib/main.rb
 
-Para subir a aplicação pode-se rodar o comando:
-> java -jar target/payments.jar
+If you prefer use a text file as input data, you can run:
+> ruby lib/main.rb /path_to_file/file
 
-Ou gerar a imagem docker
-##### Unix
-> docker build -t moip:payments
-##### Windows
+You can generate docker image
+> docker build -t gn:rover-master .
+
+And run the container with command:
 > docker build -f Dockerfile.windows -t moip:payments
 
-E subir o container com a imagem gerada:
-> docker run -d -p 8080:8080 --rm moip:payments
+E subir o container com a imagem gerada(you cannot pass file as parameter with docker image):
+> docker run --rm  -it gn:rover-master
 
-A aplicação estará disponível em http://localhost:8080
+## Running test cases
+To run test cases you should run:
+> bundle install
 
-Wiki com motivação e todas as infos necessárias para:
-* [Motivação](https://github.com/otaviosantana/payments/wiki/Motiva%C3%A7%C3%A3o)
-* [Testando a aplicação](https://github.com/otaviosantana/payments/wiki/Testando-a-aplica%C3%A7%C3%A3o)
-* [Melhorias](https://github.com/otaviosantana/payments/wiki/Melhorias)
+And:
+> ruby test/all.rb
+
+## To Do:
+- Accept files as argument when running in a docker container
