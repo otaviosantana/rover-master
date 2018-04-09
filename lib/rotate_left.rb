@@ -1,5 +1,3 @@
-require_relative 'movement'
-
 module RotateLeft
 
   def move rover
