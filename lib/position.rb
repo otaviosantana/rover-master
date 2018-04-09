@@ -9,6 +9,7 @@ class Position
     @direction = position[2]
   end
 
+  # Formatting position like required output format
   def to_s
     "#{@x} #{@y} #{@direction}"
   end
