@@ -1,4 +1,6 @@
 
-source 'https://rubygems.org' do
+source 'https://rubygems.org'
+
+group :test do
   gem "mocha"
 end

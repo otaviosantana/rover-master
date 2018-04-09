@@ -9,7 +9,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  mocha!
+  mocha
 
 BUNDLED WITH
    1.16.1
