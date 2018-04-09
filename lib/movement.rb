@@ -2,8 +2,10 @@ class Movement
 
   attr_reader :max_x, :max_y
 
-  DIRECTIONS = [ 'N', 'W', 'S', 'E']
+  # directions on clockwise, starting on North
+  CLOCKWISE_DIRECTIONS = [ 'N', 'E', 'S', 'W']
 
+  # initializing with maximum value of x and y
   def initialize(max_x, max_y)
     @max_x = max_x
     @max_y = max_y
