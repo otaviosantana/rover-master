@@ -14,6 +14,6 @@ module MoveForward
     # set y axis rover position
     rover.position.y += MOVEMENTS[rover.position.direction][1]
     # verify if rover is on plateau after move
-    raise ArgumentError.new("Invalid commands, rover is out of plateau") if rover.position.x > max_x or rover.position.y > max_y
+    raise ArgumentError.new("Invalid commands, rover is out of plateau") if rover.position.x > max_x or rover.position.y > max_y or rover.position.x < 0 or rover.position.y < 0
   end
 end
